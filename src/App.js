@@ -38,16 +38,14 @@ function App() {
       })
       .catch(err=> console.log(err))
     }
-
-    console.log('this is the token : ',token);
   },[]);
-  console.log('this is the user : ',user)
-  console.log('this is the token : ',token)
 
   return (
     <div className="App">
       {
-        token?(<Player/>):(<Login/>)
+        token?
+        (<Player spotify={spotify}/>):
+        (<Login/>)
       }
     
     </div>
