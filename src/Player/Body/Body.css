@@ -50,3 +50,6 @@
     transition: 100ms transform ease-in;
     transform: scale(1.08);
 }
+.body_songs{
+    margin: 20px -30px;
+}

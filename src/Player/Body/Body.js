@@ -4,6 +4,7 @@ import Header from './Header/Header'
 import cover_image from '../../image/cover_image.jpg'
 import { useDataLayerValue } from '../../DataLayer'
 import { FavoriteOutlined, MoreHoriz, PlayCircleFilled } from '@mui/icons-material'
+import SongRow from './SongRow/SongRow'
 
 function Body({spotify}) {
   const [{discover_weekly},disptach]=useDataLayerValue();
@@ -27,6 +28,9 @@ function Body({spotify}) {
             <MoreHoriz/>
           </div>
           {/*List of songs */}
+          {discover_weekly?.tracks.items.map(item=>{
+            <SongRow track={item.track}/>
+          })}
         </div>
     </div>
   )
