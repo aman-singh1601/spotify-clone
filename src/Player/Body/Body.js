@@ -28,9 +28,9 @@ function Body({spotify}) {
             <MoreHoriz/>
           </div>
           {/*List of songs */}
-          {discover_weekly?.tracks.items.map(item=>{
+          {discover_weekly?.tracks.items.map(item=>(
             <SongRow track={item.track}/>
-          })}
+          ))}
         </div>
     </div>
   )
